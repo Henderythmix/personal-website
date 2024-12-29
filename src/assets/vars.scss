@@ -1,0 +1,35 @@
+$background: #001216;
+$layer: #0001;
+$layer-border: #8884;
+$light-green: #72C472;
+$dark-green: #024229;
+$light-blue: #CEFCFE;
+$dark-blue: #5687A4;
+
+$bg-blur: 15px;
+$corner-radius: 16px;
+$border-width: 3px;
+
+@mixin grad-text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin box {
+  background-color: $layer;
+  border: $border-width solid $layer-border;
+  border-radius: $corner-radius;
+  color: white;
+
+  padding: 0.5em;
+  margin: 0.5em;
+  backdrop-filter: blur($bg-blur);
+  height: fit-content;
+  width: inherit;
+}
+
+@mixin box-hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  background-color: #fff3;
+}
