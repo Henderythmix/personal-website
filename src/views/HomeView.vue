@@ -9,6 +9,13 @@ import LinkPage from '@/components/LinkPage.vue';
     <TitleCard />
 
     <div class="box-container">
+      <h1>My CVs</h1>
+      <div class="grid">
+        <LinkPage title="Engineering" link="/engineer" icon="bi-code-slash" />
+      </div>
+    </div>
+
+    <div class="box-container">
       <h1>My Content</h1>
       <div class="grid">
         <LinkPage title="Games" link="https://henderythmix.itch.io" icon="bi-controller" />
@@ -23,13 +30,6 @@ import LinkPage from '@/components/LinkPage.vue';
       <div class="grid">
         <LinkPage title="Linkedin" link="https://www.linkedin.com/in/roberto-selles/" icon="bi-linkedin" />
         <LinkPage title="Mastodon" link="https://mastodon.gamedev.place/@hrmx" rel="me" icon="bi-mastodon" />
-      </div>
-    </div>
-
-    <div class="box-container">
-      <h1>My CVs</h1>
-      <div class="grid">
-        <LinkPage title="Engineering" link="/engineer" icon="bi-code-slash" />
       </div>
     </div>
   </main>

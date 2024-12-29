@@ -1,17 +1,30 @@
 <script setup>
-  const props = defineProps(['title', 'link', 'icon', 'rel'])
+  import { RouterLink } from 'vue-router';
+  const props = defineProps(['title', 'link', 'icon', 'rel']);
 </script>
 
 <template>
   <div class="link-card">
-    <a :href="props.link" :rel="props.rel">
-      <div class="icon">
-        <i :class="props.icon"></i>
-      </div>
-      <div class="title">
-        {{ title }}
-      </div>
-    </a>
+    <template v-if="props.link[0] == '/'">
+      <RouterLink :to="props.link" :rel="props.rel">
+        <div class="icon">
+          <i :class="props.icon"></i>
+        </div>
+        <div class="title">
+          {{ title }}
+        </div>
+      </RouterLink>
+    </template>
+    <template v-else>
+      <a :href="props.link" target="_blank" :rel="props.rel">
+        <div class="icon">
+          <i :class="props.icon"></i>
+        </div>
+        <div class="title">
+          {{ title }}
+        </div>
+      </a>
+    </template>
   </div>
 </template>
 
