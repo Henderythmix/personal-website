@@ -36,10 +36,11 @@
   }
 
   .name {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     font-weight: bold;
     background: linear-gradient(to top, vars.$dark-green, vars.$light-green);
     @include vars.grad-text;
+    text-align: center;
   }
 
   .intro {
