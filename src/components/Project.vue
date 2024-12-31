@@ -1,9 +1,36 @@
 <script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+
 const props = defineProps(['title', 'link', 'date'])
+
+const instance = ref(null);
+
+const handleScroll = () => {
+  let inBounds = instance.value.getBoundingClientRect().bottom < window.innerHeight && instance.value.getBoundingClientRect().top > 0
+  if (inBounds) {
+    instance.value.classList.remove('left');
+    instance.value.classList.remove('right');
+    return;
+  }
+
+  if (instance.value.getBoundingClientRect().right < window.innerWidth / 2) {
+    instance.value.classList.add('left');
+  } else {
+    instance.value.classList.add('right');
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+})
 </script>
 
 <template>
-  <div class="box-container">
+  <div class="box-container" ref="instance">
     <h1>{{ props.title }}</h1>
     <div>{{ props.date }}</div>
     <p><slot></slot></p>
@@ -13,6 +40,16 @@ const props = defineProps(['title', 'link', 'date'])
 
 <style lang="scss" scoped>
 @use '@/assets/vars';
+
+.left {
+  transform: translate(-25vw, 0);
+  opacity: 0;
+}
+
+.right {
+  transform: translate(25vw, 0);
+  opacity: 0;
+}
 
 .box-container {
   display: flex;
