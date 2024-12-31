@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
 }
 
 p {
-  text-indent: 4rem;
+  text-align: center;
   padding: 0.5rem;
 }
 
