@@ -29,7 +29,7 @@
   .picture {
     width: 8rem;
     height: 8rem;
-    background-image: url('@/assets/portrait.jpg');
+    background-image: url('https://gravatar.com/avatar/438bbe7beb03b05f61c6b1272dd6cb98cfdc1ef2dc0edac1eccd932169887fa9?s=512');
     background-size: cover;
     background-position: center;
     border-radius: 100%;
