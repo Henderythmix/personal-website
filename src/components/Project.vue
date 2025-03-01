@@ -4,19 +4,22 @@ import { onBeforeUnmount, onMounted, ref } from 'vue';
 const props = defineProps(['title', 'link', 'date'])
 
 const instance = ref(null);
+const referencePoint = ref(null);
 
 const handleScroll = () => {
-  let inBounds = instance.value.getBoundingClientRect().bottom < window.innerHeight && instance.value.getBoundingClientRect().top > 0
+  let average = referencePoint.value.getBoundingClientRect().top + (instance.value.getBoundingClientRect().height) / 2;
+
+  let inBounds = average < window.innerHeight - 30 && average > 30
   if (inBounds) {
-    instance.value.classList.remove('left');
-    instance.value.classList.remove('right');
+    instance.value.classList.remove('top');
+    instance.value.classList.remove('bottom');
     return;
   }
 
-  if (instance.value.getBoundingClientRect().right < window.innerWidth / 2) {
-    instance.value.classList.add('left');
+  if (average < window.innerHeight / 2) {
+    instance.value.classList.add('top');
   } else {
-    instance.value.classList.add('right');
+    instance.value.classList.add('bottom');
   }
 }
 
@@ -30,24 +33,27 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="box-container" ref="instance">
-    <h1>{{ props.title }}</h1>
-    <div>{{ props.date }}</div>
-    <p><slot></slot></p>
-    <a :href="props.link">More</a>
+  <div class="box-wrapper">
+    <div id="reference-point" ref="referencePoint"></div>
+    <div class="box-container" ref="instance">
+      <h1>{{ props.title }}</h1>
+      <div>{{ props.date }}</div>
+      <p><slot></slot></p>
+      <a :href="props.link">More</a>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @use '@/assets/vars';
 
-.left {
-  transform: translate(-25vw, 0);
+.top {
+  transform: translateY(-25vh) translateZ(0);
   opacity: 0;
 }
 
-.right {
-  transform: translate(25vw, 0);
+.bottom {
+  transform: translateY(25vh) translateZ(0);
   opacity: 0;
 }
 
@@ -57,6 +63,7 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: space-between;
   height: max-content;
+  will-change: transform;
 }
 
 p {

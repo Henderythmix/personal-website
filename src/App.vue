@@ -27,8 +27,10 @@ body {
 
   font-family: monospace;
   font-size: 16px;
-  width: 100%;
+  max-width: 100vw;
   height: 100%;
+
+  overflow-x: hidden;
 
   -ms-overflow-style: none;
 
@@ -88,7 +90,7 @@ main {
 .box-container {
   @include vars.box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: max-content;
+  width: fit-content;
 
   h1 {
     margin: 1rem 2rem;

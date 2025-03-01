@@ -10,20 +10,20 @@ import LinkPage from '@/components/LinkPage.vue';
     <Hero>
       <div>
         <TitleCard />
-        <h1>Computer Engineering Student</h1>
+        <div>Computer Engineering Student with a goal of evolving existing software</div>
       </div>
       <div>Scroll for more</div>
       <div id="arrow-down"><a href="#about"><i class="bi bi-chevron-double-down"></i></a></div>
     </Hero>
     <p id="about">
-      During my highscool years, I have learned to code by myself through online resources in fields such as Web development in HTML and CSS, small tools in Python, and game development in both Unity, and Love2D. Since then, I have studied at Simon Fraser University since 2022 in languages such as C++, Java, VHDL and Matlab which have not only taught me to program more optimally, but take my existing knowledge and skills to the next level. Not only have I worked with programming, but I have also learned to design hardware with VHDL.
+      Programming and computers have always been a passion for me. I remember receiving my first Nintendo DS at the age of 4 and realized since that I wanted to work in an engineering degree. Even with programming being a hobby in my highschool years, I have decided to start studying Computer Engineering at Simon Fraser University since 2022. 
     </p>
 
     <h1>Experience</h1>
     <p>All work experiences within tech, whether they are actual jobs or volunteer experiences</p>
     <div class="grid">
-      <Project title="ESSS Website" date="June 2023-Present" link="https://esss.ca">
-        Designed a maintainable website for the Engineering Student Society at Simon Fraser University. Maintained it since approximately June 2023.
+      <Project title="ESSS Website" date="June 2023-January 2025" link="https://esss.ca">
+        Designed a maintainable website for the Engineering Student Society at Simon Fraser University. Maintained it until January 2025 to focus on studies after fracturing my foot.
       </Project>
       <Project title="SFU Robot Soccer" date="January-April 2024" link="https://www.sfurobotsoccer.com/">
         Although there was no redesigning for this club, I was responsible for maintaining the website for the SFU Robot Soccer team from January 2024 to April 2024
@@ -76,7 +76,7 @@ p {
   justify-items: center;
 }
 
-.box-container {
+.box-wrapper {
   width: 390px;
   height: calc(100% - 2rem);
 }
@@ -86,7 +86,7 @@ p {
     max-width: 90%;
   }
 
-  .box-container {
+  .box-wrapper {
     width: 85%;
   }
 }
