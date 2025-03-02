@@ -1,15 +1,40 @@
+<script setup>
+  import { Typed } from '@duskmoon/vue3-typed-js';
+
+  const setup = {
+    strings: ['Roberto Selles', 'Henderythmix'],
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 5000,
+    loop: true,
+    showCursor: false,
+
+  }
+</script>
+
 <template>
   <div class="title-card">
     <div class="picture"></div>
     <div class="text">
       <div class="intro">My name is</div>
-      <div class="name">Roberto Selles</div>
+      <div class="name">
+        <Typed :options="setup">
+          <span class="typing"></span>
+        </Typed>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
   @use '@/assets/vars';
+
+  .typing {
+    height: 2.6rem;
+    display: block;
+    width: 321px;
+    text-align: left;
+  }
 
   .title-card {
     display: flex;
@@ -50,6 +75,10 @@
   @media only screen and (max-width: 450px) {
     .title-card {
       flex-direction: column;
+    }
+
+    .typing {
+      text-align: center;
     }
 
     .text {
