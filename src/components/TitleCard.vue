@@ -32,7 +32,7 @@
   .typing {
     height: 2.6rem;
     display: block;
-    width: 321px;
+    width: 325px;
     text-align: left;
   }
 
