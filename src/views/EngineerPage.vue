@@ -16,7 +16,7 @@ import LinkPage from '@/components/LinkPage.vue';
       <div id="arrow-down"><a href="#about"><i class="bi bi-chevron-double-down"></i></a></div>
     </Hero>
     <p id="about">
-      Programming and computers have always been a passion for me. I remember receiving my first Nintendo DS at the age of 4 and realized since that I wanted to work in an engineering degree. Even with programming being a hobby in my highschool years, I have decided to start studying Computer Engineering at Simon Fraser University since 2022. 
+      Programming and computers have always been a passion for me. I remember receiving my first Nintendo DS at the age of 4 and realized since that I wanted to work in an engineering degree. Even with programming being a hobby in my highschool years, I have decided to start studying Computer Engineering at Simon Fraser University since 2022. After learning to do things professionally I started with short term projects such as game jams in C++, or hackathons in JavaScript. I have also volunteered to maintain websites for my university clubs. Now that I've done those, I am starting my big projects such as my game development studio with WebAssembly in C++ and JavaScript with my Game Engine being worked on for four months now. I am also looking to enter the tech industry as a full time software developer with my skills even if I have to start from the ground up.
     </p>
 
     <h1>Experience</h1>
