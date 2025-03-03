@@ -30,7 +30,7 @@
   @use '@/assets/vars';
 
   .typing {
-    height: 2.6rem;
+    min-height: 2.6rem;
     display: block;
     width: 325px;
     text-align: left;
@@ -79,6 +79,7 @@
 
     .typing {
       text-align: center;
+      width: 100%;
     }
 
     .text {
