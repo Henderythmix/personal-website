@@ -13,7 +13,7 @@ const isOpen = ref(false);
           <RouterLink to="/">Links</RouterLink>
           <RouterLink to="/engineer">Engineering</RouterLink>
           <RouterLink to="/music">Musician</RouterLink>
-          <RouterLink to="/blog">Blog</RouterLink>
+          <RouterLink to="/blog?id=0">Blog</RouterLink>
         </div>
     </div>
   </header>
