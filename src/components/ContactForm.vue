@@ -12,15 +12,11 @@ const form = ref({
   message: ''
 });
 
-onMounted(() => {
+function submitForm() {
   grecaptcha.render('captcha', {
     'sitekey' : '6LdgtekqAAAAAHdZmrkDk1kzEFYA3aKsOaOZKyeQ',
     'theme' : 'dark',
-
   });
-});
-
-function submitForm() {
 
   if (grecaptcha.getResponse() == '') {
     alert("Please complete the reCAPTCHA");
