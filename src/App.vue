@@ -118,6 +118,15 @@ main {
     margin-bottom: 2rem;
     padding: 0 2rem;
   }
+
+  a {
+    color: vars.$light-green;
+
+    &:hover {
+      color: vars.$light-blue;
+      text-decoration: underline;
+    }
+  }
 }
 
 @media only screen and (max-width: 450px) {
