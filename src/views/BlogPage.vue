@@ -6,6 +6,7 @@
   const dataRef = ref([]);
   const articleContent = ref('Content Unavailable');
   const articleName = ref('');
+  const articleDate = ref('');
   const currentID = new URLSearchParams(window.location.search).get('id'); 
 
   onMounted(async () => {    
@@ -20,6 +21,7 @@
     let converter = new showdown.Converter();
     articleContent.value = converter.makeHtml(text);
     articleName.value = data[currentID].name;
+    articleDate.value = data[currentID].published;
 
     dataRef.value = data.reverse();
   })
@@ -39,7 +41,10 @@
       </div>
     </div>
     <div class="box-container" id="article">
-      <h1>{{ articleName }}</h1>
+      <div id="article-header">
+        <h1>{{ articleName }}</h1>
+        <div id="date-data">Publish Date: {{ articleDate }}</div>
+      </div>
       <div class="markdown" v-html="articleContent"></div>
     </div>
   </div>
@@ -54,6 +59,23 @@
   margin: 0 auto;
 }
 
+#article {
+
+  #article-header {
+    border-bottom: 2px solid #8884;
+    padding-bottom: 1rem;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  #date-data {
+    margin-left: 2rem;
+    color: #888;
+  }
+}
+
 .box-container {
   padding: 1rem;
   display: block;
@@ -61,6 +83,7 @@
 
 #article-list {
   padding: 1rem 0;
+  height: 100%;
 }
 
 // every second element
