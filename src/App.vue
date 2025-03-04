@@ -114,6 +114,9 @@ main {
 .markdown {
   & > p {
     text-indent: 2rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
   }
 }
 
