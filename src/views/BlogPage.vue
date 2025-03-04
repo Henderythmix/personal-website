@@ -56,6 +56,7 @@
   display: grid;
   grid-template-columns: auto auto;
   width: 90%;
+
   margin: 0 auto;
 }
 
@@ -79,11 +80,12 @@
 .box-container {
   padding: 1rem;
   display: block;
+
+  height: 100%;
 }
 
 #article-list {
   padding: 1rem 0;
-  height: 100%;
 }
 
 // every second element
