@@ -14,7 +14,7 @@ const form = ref({
 
 onMounted(() => {
   grecaptcha.render('captcha', {
-    'sitekey' : '6LeWsukqAAAAAPN97_75OeGxuQ4bloXB0ANBpbJe',
+    'sitekey' : '6LdgtekqAAAAAHdZmrkDk1kzEFYA3aKsOaOZKyeQ',
     'theme' : 'dark',
 
   });
