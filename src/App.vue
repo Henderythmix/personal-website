@@ -111,6 +111,12 @@ main {
   justify-items: stretch;
 }
 
+.markdown {
+  & > p {
+    text-indent: 2rem;
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .grid {
     grid-template-columns: auto;
