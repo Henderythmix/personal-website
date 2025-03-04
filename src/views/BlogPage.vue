@@ -56,6 +56,7 @@
 
 .box-container {
   padding: 1rem;
+  display: block;
 }
 
 #article-list {
@@ -73,6 +74,17 @@
   *:hover {
     text-decoration: underline;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: auto;
+
+    #article-list {
+      width: calc(100% - 20px);
+      order: 1;
+    }
   }
 }
 
