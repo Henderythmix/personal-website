@@ -12,7 +12,7 @@ const isOpen = ref(false);
         <div class="pages" v-if="isOpen">
           <RouterLink to="/">Links</RouterLink>
           <RouterLink to="/engineer">Engineering</RouterLink>
-          <RouterLink to="/music">Musician</RouterLink>
+          <!--RouterLink to="/music">Musician</RouterLink-->
           <RouterLink to="/blog?id=0">Blog</RouterLink>
         </div>
     </div>

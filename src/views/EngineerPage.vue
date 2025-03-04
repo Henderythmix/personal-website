@@ -3,6 +3,7 @@ import TitleCard from '@/components/TitleCard.vue'
 import Project from '@/components/Project.vue';
 import Hero from '@/components/Hero.vue';
 import LinkPage from '@/components/LinkPage.vue';
+import ContactForm from '@/components/ContactForm.vue';
 </script>
 
 <template>
@@ -62,7 +63,8 @@ import LinkPage from '@/components/LinkPage.vue';
     <h1>Other Projects</h1>
     <p>Above are all my achievements that I think are either most relevant to my experience, or the most presentable on a resume. If you want to see my other projects, you can find them on my github below:</p> 
     <LinkPage title="Github" link="https://github.com/Henderythmix" icon="bi-github" />
-  
+    
+    <ContactForm />
   </main>
 </template>
 

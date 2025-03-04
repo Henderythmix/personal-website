@@ -1,6 +1,7 @@
 <script setup>
 import TitleCard from '@/components/TitleCard.vue'
 import LinkPage from '@/components/LinkPage.vue';
+import ContactForm from '@/components/ContactForm.vue';
 </script>
 
 <template>
@@ -9,9 +10,10 @@ import LinkPage from '@/components/LinkPage.vue';
     <TitleCard />
 
     <div class="box-container">
-      <h1>My CVs</h1>
+      <h1>Quick Links</h1>
       <div class="grid">
         <LinkPage title="Engineering" link="/engineer" icon="bi-code-slash" />
+        <LinkPage title="Blog" link="/blog" icon="bi-journal-text" />
       </div>
     </div>
 
@@ -32,6 +34,8 @@ import LinkPage from '@/components/LinkPage.vue';
         <LinkPage title="Mastodon" link="https://mastodon.gamedev.place/@hrmx" rel="me" icon="bi-mastodon" />
       </div>
     </div>
+
+    <ContactForm />
   </main>
 </template>
 
