@@ -1,6 +1,6 @@
 <script setup>
 import { supabase } from '@/lib/supabase';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const sent = ref(false);
 
@@ -12,7 +12,21 @@ const form = ref({
   message: ''
 });
 
+onMounted(() => {
+  grecaptcha.render('captcha', {
+    'sitekey' : '6LeWsukqAAAAAPN97_75OeGxuQ4bloXB0ANBpbJe',
+    'theme' : 'dark',
+
+  });
+});
+
 function submitForm() {
+
+  if (grecaptcha.getResponse() == '') {
+    alert("Please complete the reCAPTCHA");
+    return;
+  }
+
   if (sent.value) {
     alert("If you wish to resubmit, please refresh the page.");
     return;
@@ -72,6 +86,7 @@ function submitForm() {
       <input type="text" class="box-container" id="subject" name="subject" v-model="form.subject" placeholder="More About Subject..">
 
       <textarea class="box-container" id="subject" name="context" v-model="form.message" placeholder="Write something.." style="height:200px"></textarea>
+      <div id="captcha"></div>
       <button @click="submitForm()" class="btn" type="submit">Submit</button>
     </form>
   </div>
