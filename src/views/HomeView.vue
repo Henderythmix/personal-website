@@ -13,7 +13,7 @@ import ContactForm from '@/components/ContactForm.vue';
       <h1>Quick Links</h1>
       <div class="grid">
         <LinkPage title="Engineering" link="/engineer" icon="bi-code-slash" />
-        <LinkPage title="Blog" link="/blog" icon="bi-journal-text" />
+        <LinkPage title="Blog" link="/blog?id=0" icon="bi-journal-text" />
       </div>
     </div>
 
