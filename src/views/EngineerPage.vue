@@ -31,6 +31,12 @@ import ContactForm from '@/components/ContactForm.vue';
       </Project>
     </div>
 
+    <h1>MesaGuilde Studio</h1>
+    <p>MesaGuilde is my dream team. It started as a group of friends with diverse backgrounds and common hobbies. From there, I became ambitious and wanted to take it to the next level. The goal of this project is not to make money, but to give us a chance to learn and grow as a team. At this point we are very close to completing our first engine in C++, and from there we will soon be developing our first game.</p>
+    <Project title="Table Engine" date="October 2024-Present" link="https://github.com/MesaGuildeTeam/table-engine">
+      using WebAssembly technology, I've lead working on a game engine written in C++ for the web
+    </Project>
+
     <h1>Team Projects</h1>
     <div class="grid">
       <Project title="Duogotchi" date="October 2024" link="https://github.com/Henderythmix/duogotchi">
