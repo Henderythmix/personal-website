@@ -128,6 +128,7 @@ button {
   font-family: monospace;
   font-size: 16px;
   display: inline-block;
+  width: min-content;
 }
 
 </style>
