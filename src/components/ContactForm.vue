@@ -13,14 +13,15 @@ const form = ref({
 });
 
 onMounted(() => {
-  grecaptcha.render('captcha', {
-    'sitekey' : '6LdgtekqAAAAAHdZmrkDk1kzEFYA3aKsOaOZKyeQ',
-    'theme' : 'dark',
+  window.addEventListener('load', () => {
+    grecaptcha.render('captcha', {
+      'sitekey' : '6LdgtekqAAAAAHdZmrkDk1kzEFYA3aKsOaOZKyeQ',
+      'theme' : 'dark',
+    });
   });
 });
 
 function submitForm() {
-
   if (grecaptcha.getResponse() == '') {
     alert("Please complete the reCAPTCHA");
     
